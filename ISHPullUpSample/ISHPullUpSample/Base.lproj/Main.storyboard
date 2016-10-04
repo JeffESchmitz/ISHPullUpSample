@@ -38,7 +38,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LKe-NS-ZTu" userLabel="layoutMarginView">
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LYJ-os-PUm">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="LYJ-os-PUm">
                                         <frame key="frameInset" width="1000" height="1000"/>
                                     </mapView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bottom margin 5 pt below line" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dka-no-ScS" userLabel="Layout Annotation Label">
@@ -78,6 +78,11 @@
                             <constraint firstItem="LKe-NS-ZTu" firstAttribute="top" secondItem="3iV-JX-hfo" secondAttribute="top" id="fVL-cX-sYN"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="layoutAnnotationLabel" destination="dka-no-ScS" id="aoo-6b-5gc"/>
+                        <outlet property="mapView" destination="LYJ-os-PUm" id="xda-8o-49V"/>
+                        <outlet property="rootView" destination="LKe-NS-ZTu" id="0ZP-yw-4Li"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INA-Zb-2JL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kCj-AG-zcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2545" y="-29"/>
+            <point key="canvasLocation" x="1799" y="-65"/>
         </scene>
     </scenes>
 </document>
