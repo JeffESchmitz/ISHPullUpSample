@@ -105,16 +105,15 @@
                                 <frame key="frameInset" width="375" height="458.5"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1U-MF-YBj" userLabel="Topview">
-                                        <frame key="frameInset" width="1000" height="1000"/>
+                                        <frame key="frameInset" width="375" height="58.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PullUp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNf-hv-7R5" userLabel="Top Label">
-                                                <frame key="frameInset" width="1000" height="1000"/>
+                                                <frame key="frameInset" minX="10" minY="19" width="355" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qXb-2g-bdY" userLabel="Handle View" customClass="ISHPullUpHandleView">
-                                                <frame key="frameInset" width="1000" height="1000"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXb-2g-bdY" userLabel="Handle View" customClass="ISHPullUpHandleView">
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
@@ -123,10 +122,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6g6-Qe-xAU" userLabel="Button Info">
-                                                <frame key="frameInset" width="22" height="22"/>
+                                                <frame key="frameInset" minX="333" minY="18.5" width="22" height="22"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdH-Tq-xi8" userLabel="Button Lock">
-                                                <frame key="frameInset" width="1000" height="1000"/>
+                                                <frame key="frameInset" minX="20" minY="14.5" width="33" height="30"/>
                                                 <state key="normal" title="Lock"/>
                                             </button>
                                         </subviews>
@@ -146,10 +145,10 @@
                                         </constraints>
                                     </view>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kO6-Dk-Pyx">
-                                        <frame key="frameInset" width="1000" height="1000"/>
+                                        <frame key="frameInset" minY="58.5" width="375" height="400"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-AS-j9C" userLabel="Big Message">
-                                                <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                                                <rect key="frame" x="10" y="10" width="355" height="359.5"/>
                                                 <attributedString key="attributedText">
                                                     <fragment>
                                                         <string key="content">A vertical split view controller with a pull up gesture as seen in the iOS Maps app.
@@ -170,7 +169,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNa-XU-m7x" userLabel="Learn more">
-                                                <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                                                <rect key="frame" x="10" y="379.5" width="355" height="30"/>
                                                 <state key="normal" title="Learn More"/>
                                             </button>
                                         </subviews>
@@ -201,10 +200,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-JE-vAx" userLabel="Overpull">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                                <frame key="frameInset" minY="458.5" width="375" height="41.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You can stop dragging now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyf-53-QQa">
-                                        <frame key="frameInset" width="1000" height="1000"/>
+                                        <frame key="frameInset" minX="105.5" minY="13" width="164.5" height="16"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
