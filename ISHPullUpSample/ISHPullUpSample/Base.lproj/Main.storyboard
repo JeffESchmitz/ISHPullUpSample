@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -96,13 +97,12 @@
                         <viewControllerLayoutGuide type="top" id="Bc6-UK-zIM"/>
                         <viewControllerLayoutGuide type="bottom" id="6xk-wR-b2H"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LDs-d8-wEc" userLabel="Pull Up Rounded Visual Effect View" customClass="ISHPullUpRoundedVisualEffectView">
+                    <view key="view" contentMode="scaleToFill" id="LDs-d8-wEc" customClass="ISHPullUpRoundedVisualEffectView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLh-Py-WGS" userLabel="rootView">
+                            <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLh-Py-WGS" userLabel="rootView">
                                 <frame key="frameInset" width="1000" height="1000"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1U-MF-YBj" userLabel="Topview">
                                         <frame key="frameInset" width="1000" height="1000"/>
@@ -174,9 +174,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-JE-vAx">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0Q-JE-vAx" userLabel="Overpull">
                                 <frame key="frameInset" width="1000" height="1000"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You can stop dragging now" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyf-53-QQa">
                                         <frame key="frameInset" width="1000" height="1000"/>
@@ -187,9 +186,21 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="tbm-M9-jxC"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="S0Q-JE-vAx" secondAttribute="trailing" id="3l7-Hg-NzO"/>
+                            <constraint firstItem="TLh-Py-WGS" firstAttribute="leading" secondItem="LDs-d8-wEc" secondAttribute="leading" id="7Li-4w-RRH"/>
+                            <constraint firstItem="S0Q-JE-vAx" firstAttribute="top" secondItem="TLh-Py-WGS" secondAttribute="bottom" id="AzY-Ye-cYL"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="S0Q-JE-vAx" secondAttribute="bottom" id="ENu-2T-gdg"/>
+                            <constraint firstItem="S0Q-JE-vAx" firstAttribute="leading" secondItem="LDs-d8-wEc" secondAttribute="leading" id="bQa-YW-wac"/>
+                            <constraint firstAttribute="trailing" secondItem="TLh-Py-WGS" secondAttribute="trailing" id="dsw-NU-IxS"/>
+                            <constraint firstAttribute="top" secondItem="TLh-Py-WGS" secondAttribute="top" id="nhm-SH-AQa"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="500"/>
