@@ -102,7 +102,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TLh-Py-WGS" userLabel="rootView">
-                                <frame key="frameInset" width="1000" height="1000"/>
+                                <frame key="frameInset" width="375" height="458.5"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1U-MF-YBj" userLabel="Topview">
                                         <frame key="frameInset" width="1000" height="1000"/>
@@ -191,8 +191,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="h1U-MF-YBj" firstAttribute="top" secondItem="TLh-Py-WGS" secondAttribute="top" id="G16-Ok-6F9"/>
-                                    <constraint firstAttribute="trailing" secondItem="h1U-MF-YBj" secondAttribute="trailing" id="WWJ-Uv-I5J"/>
-                                    <constraint firstAttribute="trailing" secondItem="kO6-Dk-Pyx" secondAttribute="trailing" id="gHF-Vf-K80"/>
+                                    <constraint firstAttribute="trailing" secondItem="kO6-Dk-Pyx" secondAttribute="trailing" id="Ng0-Dj-m2p"/>
+                                    <constraint firstAttribute="trailing" secondItem="h1U-MF-YBj" secondAttribute="trailing" id="OdO-Dj-rqR"/>
                                     <constraint firstItem="h1U-MF-YBj" firstAttribute="leading" secondItem="TLh-Py-WGS" secondAttribute="leading" id="lO1-L0-A6O"/>
                                     <constraint firstAttribute="bottom" secondItem="kO6-Dk-Pyx" secondAttribute="bottom" id="lQZ-PU-mbC"/>
                                     <constraint firstItem="kO6-Dk-Pyx" firstAttribute="leading" secondItem="TLh-Py-WGS" secondAttribute="leading" id="qPB-Zk-xAM"/>
