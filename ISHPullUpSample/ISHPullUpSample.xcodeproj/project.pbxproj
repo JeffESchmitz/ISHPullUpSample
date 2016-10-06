@@ -17,6 +17,10 @@
 		95C8CF1D1DA28DE000C0885A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95C8CF1C1DA28DE000C0885A /* Assets.xcassets */; };
 		95C8CF201DA28DE000C0885A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C8CF1E1DA28DE000C0885A /* LaunchScreen.storyboard */; };
 		95C8CF2B1DA28DE000C0885A /* ISHPullUpSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8CF2A1DA28DE000C0885A /* ISHPullUpSampleUITests.swift */; };
+		95E85A8B1DA5AE870032153B /* ISHPullUpHandleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E85A861DA5AE870032153B /* ISHPullUpHandleView.m */; };
+		95E85A8C1DA5AE870032153B /* ISHPullUpRoundedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E85A881DA5AE870032153B /* ISHPullUpRoundedView.m */; };
+		95E85A8D1DA5AE870032153B /* ISHPullUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E85A8A1DA5AE870032153B /* ISHPullUpViewController.m */; };
+		95E85A901DA5F1B90032153B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E85A8F1DA5F1B90032153B /* WebViewController.swift */; };
 		96BECF8FFB196CB206132616 /* Pods_ISHPullUpSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F08638C9DF4E07813ADB102A /* Pods_ISHPullUpSample.framework */; };
 		E902A5FCE81C4AEA43D02005 /* Pods_ISHPullUpSampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24DED417E7E7304CB8A88B2 /* Pods_ISHPullUpSampleUITests.framework */; };
 /* End PBXBuildFile section */
@@ -47,6 +51,15 @@
 		95C8CF261DA28DE000C0885A /* ISHPullUpSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ISHPullUpSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C8CF2A1DA28DE000C0885A /* ISHPullUpSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISHPullUpSampleUITests.swift; sourceTree = "<group>"; };
 		95C8CF2C1DA28DE000C0885A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95E85A841DA5AE870032153B /* ISHPullUpSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ISHPullUpSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		95E85A851DA5AE870032153B /* ISHPullUpHandleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHPullUpHandleView.h; sourceTree = "<group>"; };
+		95E85A861DA5AE870032153B /* ISHPullUpHandleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISHPullUpHandleView.m; sourceTree = "<group>"; };
+		95E85A871DA5AE870032153B /* ISHPullUpRoundedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHPullUpRoundedView.h; sourceTree = "<group>"; };
+		95E85A881DA5AE870032153B /* ISHPullUpRoundedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISHPullUpRoundedView.m; sourceTree = "<group>"; };
+		95E85A891DA5AE870032153B /* ISHPullUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHPullUpViewController.h; sourceTree = "<group>"; };
+		95E85A8A1DA5AE870032153B /* ISHPullUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISHPullUpViewController.m; sourceTree = "<group>"; };
+		95E85A8E1DA5AEB70032153B /* ISHPullUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHPullUp.h; sourceTree = "<group>"; };
+		95E85A8F1DA5F1B90032153B /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A24DED417E7E7304CB8A88B2 /* Pods_ISHPullUpSampleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISHPullUpSampleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2384C82FE703BD167C87F8 /* Pods-ISHPullUpSampleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ISHPullUpSampleUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ISHPullUpSampleUITests/Pods-ISHPullUpSampleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F08638C9DF4E07813ADB102A /* Pods_ISHPullUpSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ISHPullUpSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +108,7 @@
 		95C8CF141DA28DE000C0885A /* ISHPullUpSample */ = {
 			isa = PBXGroup;
 			children = (
+				95E85A831DA5AE670032153B /* ISHSource */,
 				95C8CF151DA28DE000C0885A /* AppDelegate.swift */,
 				95C8CF171DA28DE000C0885A /* ViewController.swift */,
 				95C8CF191DA28DE000C0885A /* Main.storyboard */,
@@ -103,6 +117,7 @@
 				95C8CF211DA28DE000C0885A /* Info.plist */,
 				956640871DA2902F005CEBBA /* ContentVC.swift */,
 				9566408A1DA29108005CEBBA /* BottomVC.swift */,
+				95E85A8F1DA5F1B90032153B /* WebViewController.swift */,
 			);
 			path = ISHPullUpSample;
 			sourceTree = "<group>";
@@ -114,6 +129,21 @@
 				95C8CF2C1DA28DE000C0885A /* Info.plist */,
 			);
 			path = ISHPullUpSampleUITests;
+			sourceTree = "<group>";
+		};
+		95E85A831DA5AE670032153B /* ISHSource */ = {
+			isa = PBXGroup;
+			children = (
+				95E85A8E1DA5AEB70032153B /* ISHPullUp.h */,
+				95E85A851DA5AE870032153B /* ISHPullUpHandleView.h */,
+				95E85A861DA5AE870032153B /* ISHPullUpHandleView.m */,
+				95E85A871DA5AE870032153B /* ISHPullUpRoundedView.h */,
+				95E85A881DA5AE870032153B /* ISHPullUpRoundedView.m */,
+				95E85A891DA5AE870032153B /* ISHPullUpViewController.h */,
+				95E85A8A1DA5AE870032153B /* ISHPullUpViewController.m */,
+				95E85A841DA5AE870032153B /* ISHPullUpSample-Bridging-Header.h */,
+			);
+			name = ISHSource;
 			sourceTree = "<group>";
 		};
 		9CFD30568D9397D0C2AA2623 /* Pods */ = {
@@ -193,6 +223,7 @@
 					95C8CF111DA28DE000C0885A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3Q3NT65HWY;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					95C8CF251DA28DE000C0885A = {
@@ -340,10 +371,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95E85A8D1DA5AE870032153B /* ISHPullUpViewController.m in Sources */,
+				95E85A8B1DA5AE870032153B /* ISHPullUpHandleView.m in Sources */,
 				95C8CF181DA28DE000C0885A /* ViewController.swift in Sources */,
 				95C8CF161DA28DE000C0885A /* AppDelegate.swift in Sources */,
+				95E85A8C1DA5AE870032153B /* ISHPullUpRoundedView.m in Sources */,
 				956640881DA2902F005CEBBA /* ContentVC.swift in Sources */,
 				9566408B1DA29108005CEBBA /* BottomVC.swift in Sources */,
+				95E85A901DA5F1B90032153B /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,11 +520,14 @@
 			baseConfigurationReference = 73EFD12E0D913307C6DAA769 /* Pods-ISHPullUpSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3Q3NT65HWY;
 				INFOPLIST_FILE = ISHPullUpSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codefume.ISHPullUpSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ISHPullUpSample/ISHPullUpSample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -499,11 +537,13 @@
 			baseConfigurationReference = 65C8A2E1923635A0D38DF4CE /* Pods-ISHPullUpSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3Q3NT65HWY;
 				INFOPLIST_FILE = ISHPullUpSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codefume.ISHPullUpSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ISHPullUpSample/ISHPullUpSample-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
