@@ -50,9 +50,10 @@ class BottomVC: UIViewController
         // for demo purposes, we replace the bottomViewController with a web view controller
         // there is no way back in the sample app though
         // this also highlights the behavior of the pullup view controller without a sizing and state delegate
-//        let webVC = WebViewController()
-//        webVC.loadURL(URL(string: "https://iosphere.de"))
-//        pullUpController.bottomViewController = webVC
+        let webVC = WebViewController()
+        webVC.loadUrl(URL(string: "https://iosphere.de")!)
+        
+        pullUpController.bottomViewController = webVC
     }
     
     @IBAction func buttonTappedLock(_ sender: AnyObject) {
