@@ -11,7 +11,7 @@ import UIKit
 import MapKit
 //import ISHPullUp
 
-class ContentVC: UIViewController, ISHPullUpContentDelegate
+class ContentVC: UIViewController
 {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var layoutAnnotationLabel: UILabel!
@@ -28,6 +28,10 @@ class ContentVC: UIViewController, ISHPullUpContentDelegate
         // to correctly update the legal label and coordinate region
         mapView.preservesSuperviewLayoutMargins = true
     }
+    
+
+}
+extension ContentVC: ISHPullUpContentDelegate {
     
     // MAR: ISHPullUpContentDelegate
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, update edgeInsets: UIEdgeInsets, forContentViewController contentVC: UIViewController) {

@@ -11,10 +11,7 @@ import Foundation
 import UIKit
 import MapKit
 
-class BottomVC: UIViewController
-    ,ISHPullUpSizingDelegate
-    ,ISHPullUpStateDelegate
-{
+class BottomVC: UIViewController {
     @IBOutlet weak var handleView: ISHPullUpHandleView!
     @IBOutlet weak var rootView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -22,11 +19,11 @@ class BottomVC: UIViewController
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var buttonLock: UIButton!
     
-    private var firstAppearanceCompleted = false
+    var firstAppearanceCompleted = false
     weak var pullUpController: ISHPullUpViewController!
     
     // we allow the pullUp to snap to the half-way point
-    private var halfWayPoint = CGFloat(0)
+    var halfWayPoint = CGFloat(0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +59,10 @@ class BottomVC: UIViewController
     }
     
     
+    
+
+}
+extension BottomVC: ISHPullUpSizingDelegate {
     // MARK: ISHPullUpSizingDelegate
     
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, maximumHeightForBottomViewController bottomVC: UIViewController, maximumAvailableHeight: CGFloat) -> CGFloat {
@@ -93,7 +94,10 @@ class BottomVC: UIViewController
         // to properly support scrolling in the intermediate states
         scrollView.contentInset = edgeInsets
     }
-    
+
+}
+
+extension BottomVC: ISHPullUpStateDelegate {
     // MARK: ISHPullUpStateDelegate
     
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, didChangeTo state: ISHPullUpState) {
@@ -114,6 +118,7 @@ class BottomVC: UIViewController
         }
     }
 }
+
 
 class ModalViewController: UIViewController {
     
