@@ -76,7 +76,9 @@ extension BottomVC: ISHPullUpSizingDelegate {
     }
     
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, minimumHeightForBottomViewController bottomVC: UIViewController) -> CGFloat {
-        return topView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        var height = topView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        height = 110
+        return height
     }
     
     func pullUpViewController(_ pullUpViewController: ISHPullUpViewController, targetHeightForBottomViewController bottomVC: UIViewController, fromCurrentHeight height: CGFloat) -> CGFloat {
