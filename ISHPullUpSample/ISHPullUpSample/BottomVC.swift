@@ -10,14 +10,16 @@ import Foundation
 //import ISHPullUp
 import UIKit
 import MapKit
+import GoogleMaps
 
-class BottomVC: UIViewController {
+class BottomVC: UIViewController, GMSPanoramaViewDelegate {
     @IBOutlet weak var handleView: ISHPullUpHandleView!
     @IBOutlet weak var rootView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var buttonLock: UIButton!
+    @IBOutlet weak var panoramaView: UIView!
     
     var firstAppearanceCompleted = false
     weak var pullUpController: ISHPullUpViewController!
@@ -27,6 +29,17 @@ class BottomVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let frameRect = CGRect(x: 0, y: 0, width: 375, height: 128)
+        
+        let panoView = GMSPanoramaView(frame: frameRect)
+        self.panoramaView.frame = panoView.frame
+        self.panoramaView.addSubview(panoView)
+        self.panoramaView = panoView
+        
+        panoView.moveNearCoordinate(CLLocationCoordinate2DMake(-33.732, 150.312))
+        panoView.delegate = self
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
         topView.addGestureRecognizer(tapGesture)
     }
@@ -59,7 +72,18 @@ class BottomVC: UIViewController {
     }
     
     
+    // MARK: - GMSPanoramaViewDelegate
+    func panoramaView(_ view: GMSPanoramaView, error: Error, onMoveNearCoordinate coordinate: CLLocationCoordinate2D) {
+        print("Moving near coordinate (\(coordinate.latitude),\(coordinate.longitude) error: \(error.localizedDescription)")
+    }
     
+    func panoramaView(_ view: GMSPanoramaView, error: Error, onMoveToPanoramaID panoramaID: String) {
+        print("Moving to PanoID \(panoramaID) error: \(error.localizedDescription)")
+    }
+    
+    func panoramaView(_ view: GMSPanoramaView, didMoveTo panorama: GMSPanorama?) {
+        print("Moved to panoramaID: \(panorama?.panoramaID) coordinates: (\(panorama?.coordinate.latitude),\(panorama?.coordinate.longitude))")
+    }
 
 }
 extension BottomVC: ISHPullUpSizingDelegate {
