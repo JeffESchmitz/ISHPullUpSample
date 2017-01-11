@@ -9,32 +9,38 @@
 import UIKit
 //import ISHPullUp
 
-class ViewController: ISHPullUpViewController {
+class ViewController: ISHPullUpViewController, BottomViewDelegate {
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+    commonInit()
+  }
+  
+  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    commonInit()
+  }
+  
+  private func commonInit() {
+    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+    let contentVC = storyBoard.instantiateViewController(withIdentifier: "content") as! ContentVC
+    let bottomVC = storyBoard.instantiateViewController(withIdentifier: "bottom") as! BottomVC
+    
+    contentViewController = contentVC
+    bottomViewController = bottomVC
 
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
+    contentVC.bottomViewDelegate = self
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        commonInit()
-    }
+    bottomVC.pullUpController = self
+    contentDelegate = contentVC
+    sizingDelegate = bottomVC
+    stateDelegate = bottomVC
     
-    private func commonInit() {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let contentVC = storyBoard.instantiateViewController(withIdentifier: "content") as! ContentVC
-        let bottomVC = storyBoard.instantiateViewController(withIdentifier: "bottom") as! BottomVC
-        
-        contentViewController = contentVC
-        bottomViewController = bottomVC
-        
-        bottomVC.pullUpController = self
-        contentDelegate = contentVC
-        sizingDelegate = bottomVC
-        stateDelegate = bottomVC
-        
-    }
-    
+  }
+  
+  func setBottomViewHeight(bottomHeight: CGFloat, animated: Bool) {
+    self.setBottomHeight(bottomHeight, animated: animated)
+  }
+  
 }
 
